@@ -33,6 +33,28 @@ public class Node extends Object {
 
         return totalOutput;
     }
+
+    public void addreData( int new2Data) {
+
+        if (address != null){
+            address.addreData(new2Data);//
+        }
+        else {
+            address = new Node (new2Data);
+        }
+
+    }
+
+    public void lastGone( int new3Data) {
+        Node before;
+        if (address != null){
+            address.lastGone(new3Data);//
+        }
+        else {
+
+        }
+
+    }
 }
 
 /*
