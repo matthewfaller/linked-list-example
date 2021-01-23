@@ -12,6 +12,7 @@ public class LinkedList /*implements Iterable<Integer>*/ {
 
     /**
      * Appends a new element to the end of the list
+     * COMPLETED "appendData"
      * */
     public void appendData(int newData) {
        // Node notEmpty;
@@ -24,7 +25,19 @@ public class LinkedList /*implements Iterable<Integer>*/ {
     }
 
     /**
+     * total Data's purpose is to sum up all the values in the linkedlist
+     * todo "totalData"
+     * @return
+     */
+    public int totalData() {
+        int total;
+
+        return 0;
+    }
+
+    /**
      *  Returns true if no elements are present in the list
+     *  COMPLETED "isEmpty"
      * */
     public boolean isEmpty() {
         if (zeroethNode != null) {
@@ -35,6 +48,7 @@ public class LinkedList /*implements Iterable<Integer>*/ {
 
     /**
      * Returns the current number of items in the list
+     * COMPLETED "getCount"
      * */
     public int getCount() {
 
@@ -43,14 +57,17 @@ public class LinkedList /*implements Iterable<Integer>*/ {
 
     /**
      * Removes the first element from the list and returns the data value
+     * todo "removeFirst"
      * */
     public int removeFirst() {
         count--;
+
         return 0;
     }
 
     /**
      * Removes the last element from the list and returns the data value
+     * todo "removeLast"... check if this removes the first node
      * */
     public int removeLast() {
         count--;
@@ -64,6 +81,7 @@ public class LinkedList /*implements Iterable<Integer>*/ {
 
     /**
      * Removes all elements
+     * COMPLETED "removeAll"
      * */
     public void removeAll() {
         zeroethNode.address = null;
@@ -73,6 +91,7 @@ public class LinkedList /*implements Iterable<Integer>*/ {
 
     /**
      * Adds all of the elements from the linked list to this list
+     * todo "addData"
      * */
 
     public void addData(LinkedList list) {
@@ -80,7 +99,7 @@ public class LinkedList /*implements Iterable<Integer>*/ {
    }
 
     public void copyData(LinkedList list) {
-        this.zeroethNode = list.zeroethNode;// this is wrong, because the addresses are the same
+        this.zeroethNode = list.zeroethNode;// todo "copyData" this is wrong, because the addresses are the same
     }
 
     @Override
@@ -88,7 +107,7 @@ public class LinkedList /*implements Iterable<Integer>*/ {
         if (isEmpty()) {
             return "[]";
         }
-
+        //this is done, this lets you print the entire linked list as zeroeth node is the 1st node
         return zeroethNode.toString();
     }
 }
